@@ -1,10 +1,5 @@
-/mall.iml
-/mall-api/mall-api.iml
-/mall-common/mall-common.iml
-/mall-mapper/mall-mapper.iml
-/mall-pojo/mall-pojo.iml
-/mall-service/mall-service.iml
-/mall-api/target/classes/com/heaven/Application.class
+*.class
+*.iml
 /mall-api/target/classes/META-INF/mall-api.kotlin_module
 /.idea/libraries/Maven__com_github_xiaoymin_swagger_bootstrap_ui_1_6.xml
 /.idea/libraries/Maven__com_google_guava_guava_18_0.xml
@@ -23,5 +18,4 @@
 /.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml
 /.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml
 /.idea/inspectionProfiles/Project_Default.xml
-/mall-api/target/classes/com/heaven/config/Swagger2.class
 /.idea/uiDesigner.xml
