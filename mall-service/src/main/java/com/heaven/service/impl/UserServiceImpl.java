@@ -1,4 +1,4 @@
-package com.heaven.impl;
+package com.heaven.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.heaven.bo.UserBO;
@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 查询用户名是否存在
+     *
      * @param username 用户名
      * @return 用户名是否存在
      */
@@ -41,13 +42,14 @@ public class UserServiceImpl implements UserService {
     public Boolean queryUsernameIsExist(String username) {
         Example userExample = new Example(Users.class);
         Example.Criteria criteria = userExample.createCriteria();
-        criteria.andEqualTo("username",username);
+        criteria.andEqualTo("username", username);
         Users users = usersMapper.selectOneByExample(userExample);
         return !ObjectUtils.isEmpty(users);
     }
 
     /**
      * 创建用户
+     *
      * @param userBO 入参
      * @return 出参
      */
@@ -79,8 +81,9 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 根据用户名密码查询用户信息
+     *
      * @param username 用户名
-     * @param md5Str md5后的密码
+     * @param md5Str   md5后的密码
      * @return 用户信息
      */
     @Override

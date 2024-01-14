@@ -1,5 +1,6 @@
 *.class
 *.iml
+*.jar
 /mall-api/target/classes/META-INF/mall-api.kotlin_module
 /.idea/libraries/Maven__com_github_xiaoymin_swagger_bootstrap_ui_1_6.xml
 /.idea/libraries/Maven__com_google_guava_guava_18_0.xml
@@ -19,3 +20,20 @@
 /.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/uiDesigner.xml
+/mall-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/mall-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/mall-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/mall-common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/mall-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/mall-mapper/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/mall-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/mall-pojo/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/mall-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/mall-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/mall-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/mall-mapper/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/mall-common/target/classes/META-INF/mall-common.kotlin_module
+/mall-mapper/target/mall-mapper-1.0-SNAPSHOT.jar
+/.idea/libraries/Maven__com_alibaba_fastjson_1_2_76.xml
+/.idea/libraries/Maven__org_projectlombok_lombok_1_18_8.xml
+/mall-mapper/target/maven-archiver/pom.properties
