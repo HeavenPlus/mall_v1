@@ -4,6 +4,7 @@ import com.heaven.pojo.Items;
 import com.heaven.pojo.ItemsImg;
 import com.heaven.pojo.ItemsParam;
 import com.heaven.pojo.ItemsSpec;
+import com.heaven.pojo.vo.ShopCarVO;
 import com.heaven.utils.PageResult;
 import com.heaven.pojo.vo.CommentLevelCountsVO;
 
@@ -66,4 +67,34 @@ public interface ItemService {
      * @return 商品评价
      */
     PageResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize);
+
+    /**
+     * 根据关键字搜索商品
+     *
+     * @param keywords 关键字
+     * @param sort 排序规则
+     * @param page 页数
+     * @param pageSize 条数
+     * @return 商品列表
+     */
+    PageResult searchItems(String keywords, String sort, Integer page, Integer pageSize);
+
+    /**
+     * 根据分类id搜索商品
+     *
+     * @param catId 分类id
+     * @param sort 排序规则
+     * @param page 页数
+     * @param pageSize 条数
+     * @return 商品列表
+     */
+    PageResult searchItems(Integer catId, String sort, Integer page, Integer pageSize);
+
+    /**
+     * 根据商品规格查询商品信息
+     *
+     * @param itemSpecIds 商品规格ids
+     * @return 商品信息
+     */
+    List<ShopCarVO> queryItemsBySpecIds(String itemSpecIds);
 }

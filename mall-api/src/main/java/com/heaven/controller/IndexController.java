@@ -28,7 +28,7 @@ import java.util.List;
  * @Author Heaven
  * @Date 2024/1/14 下午1:59
  */
-@Api("首页展示的相关接口")
+@Api(tags = "首页展示的相关接口")
 @RestController
 @RequestMapping("/index")
 public class IndexController {

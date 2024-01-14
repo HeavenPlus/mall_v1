@@ -1,12 +1,13 @@
 package com.heaven.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.heaven.enums.CommentLevel;
 import com.heaven.mapper.*;
 import com.heaven.pojo.*;
 import com.heaven.pojo.vo.CommentLevelCountsVO;
 import com.heaven.pojo.vo.ItemCommentVO;
+import com.heaven.pojo.vo.SearchItemsVO;
+import com.heaven.pojo.vo.ShopCarVO;
 import com.heaven.service.ItemService;
 import com.heaven.utils.DesensitizationUtil;
 import com.heaven.utils.PageResult;
@@ -14,9 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Description
@@ -133,18 +132,65 @@ public class ItemServiceImpl implements ItemService {
         for (ItemCommentVO vo : list) {
             vo.setNickname(DesensitizationUtil.commonDisplay(vo.getNickname()));
         }
-        return setterPageResult(list, page);
+        return new PageResult(list, page);
     }
 
-    private PageResult setterPageResult(List<ItemCommentVO> list, Integer page) {
-        PageInfo<?> pageList = new PageInfo<>(list);
-        PageResult pageResult = new PageResult();
-        pageResult.setPage(page);
-        pageResult.setRows(list);
-        pageResult.setTotal(pageList.getPages());
-        pageResult.setRecords(pageList.getTotal());
-        return pageResult;
+    /**
+     * 根据关键字搜索商品
+     *
+     * @param keywords 关键字
+     * @param sort     排序规则
+     * @param page     页数
+     * @param pageSize 条数
+     * @return 商品列表
+     */
+    @Override
+    public PageResult searchItems(String keywords, String sort, Integer page, Integer pageSize) {
+        Map<String, Object> paramMap = new HashMap<>();
+        paramMap.put("keywords", keywords);
+        paramMap.put("sort", sort);
+
+        PageHelper.startPage(page, pageSize);
+        List<SearchItemsVO> list = itemsMapper.searchItems(paramMap);
+
+        return new PageResult(list, page);
     }
+
+    /**
+     * 根据分类id查询商品
+     *
+     * @param catId    分类id
+     * @param sort     排序规则
+     * @param page     页数
+     * @param pageSize 条数
+     * @return 商品列表
+     */
+    @Override
+    public PageResult searchItems(Integer catId, String sort, Integer page, Integer pageSize) {
+        Map<String, Object> paramMap = new HashMap<>();
+        paramMap.put("catId", catId);
+        paramMap.put("sort", sort);
+
+        PageHelper.startPage(page, pageSize);
+        List<SearchItemsVO> list = itemsMapper.searchItemsByCatId(paramMap);
+
+        return new PageResult(list, page);
+    }
+
+    /**
+     * 根据商品规格查询商品信息
+     *
+     * @param itemSpecIds 商品规格ids
+     * @return 商品信息
+     */
+    @Override
+    public List<ShopCarVO> queryItemsBySpecIds(String itemSpecIds) {
+        String ids[] = itemSpecIds.split(",");
+        List<String> specIdsList = new ArrayList<>();
+        Collections.addAll(specIdsList, ids);
+        return itemsMapper.queryItemsBySpecIds(specIdsList);
+    }
+
 
     private Integer getCommentCounts(String itemId, Integer level) {
         ItemsComments condition = new ItemsComments();

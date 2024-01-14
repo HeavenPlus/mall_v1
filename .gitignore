@@ -37,3 +37,8 @@
 /.idea/libraries/Maven__com_alibaba_fastjson_1_2_76.xml
 /.idea/libraries/Maven__org_projectlombok_lombok_1_18_8.xml
 /mall-mapper/target/maven-archiver/pom.properties
+/mall-pojo/target/classes/META-INF/mall-pojo.kotlin_module
+/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_2_0.xml
+/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_10.xml
+/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_12.xml
+/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_12.xml
