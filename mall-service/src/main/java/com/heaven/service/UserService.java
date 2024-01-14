@@ -1,8 +1,8 @@
 package com.heaven.service;
 
-import com.heaven.bo.UserBO;
+import com.heaven.pojo.bo.UserBO;
 import com.heaven.pojo.Users;
-import com.heaven.vo.UserVO;
+import com.heaven.pojo.vo.UserVO;
 
 /**
  * @Description

@@ -1,4 +1,4 @@
-package com.heaven.bo;
+package com.heaven.pojo.bo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

@@ -39,6 +39,11 @@ spring:
 mybatis:
   type-aliases-package: com.heaven.pojo          # 所有POJO类所在包路径
   mapper-locations: classpath:mapper/*.xml      # mapper映射文件
+  configuration:
+    map-underscore-to-camel-case: true #下划线转驼峰
+pagehelper:
+    helperDialect: mysql
+    supportMethodsArguments: true
 ############################################################
 #
 # mybatis mapper 配置

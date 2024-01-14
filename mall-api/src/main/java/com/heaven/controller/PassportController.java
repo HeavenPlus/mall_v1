@@ -1,13 +1,13 @@
 package com.heaven.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.heaven.bo.UserBO;
+import com.heaven.pojo.bo.UserBO;
 import com.heaven.pojo.Users;
 import com.heaven.service.UserService;
 import com.heaven.utils.CookieUtils;
 import com.heaven.utils.MD5Utils;
 import com.heaven.utils.Result;
-import com.heaven.vo.UserVO;
+import com.heaven.pojo.vo.UserVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

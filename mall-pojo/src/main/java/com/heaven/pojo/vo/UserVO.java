@@ -1,13 +1,9 @@
-package com.heaven.vo;
+package com.heaven.pojo.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
-
-import javax.persistence.Column;
-import javax.persistence.Id;
-import java.util.Date;
 
 /**
  * @Description

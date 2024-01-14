@@ -3,8 +3,8 @@ package com.heaven.mapper;
 
 import com.heaven.BaseMapper;
 import com.heaven.pojo.Category;
-import com.heaven.vo.CategoryVO;
-import com.heaven.vo.NewItemsVO;
+import com.heaven.pojo.vo.CategoryVO;
+import com.heaven.pojo.vo.NewItemsVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

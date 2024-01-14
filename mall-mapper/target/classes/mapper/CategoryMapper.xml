@@ -14,12 +14,12 @@
         <result column="cat_image" property="catImage" jdbcType="VARCHAR"/>
         <result column="bg_color" property="bgColor" jdbcType="VARCHAR"/>
     </resultMap>
-    <resultMap id="myCategoryVO" type="com.heaven.vo.CategoryVO">
+    <resultMap id="myCategoryVO" type="com.heaven.pojo.vo.CategoryVO">
         <result column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="type" property="type"/>
         <result column="father_id" property="fatherId"/>
-        <collection property="subCatList" ofType="com.heaven.vo.SubCategoryVO">
+        <collection property="subCatList" ofType="com.heaven.pojo.vo.SubCategoryVO">
             <result column="sub_id" property="subId"/>
             <result column="sub_name" property="subName"/>
             <result column="sub_type" property="subType"/>
@@ -43,14 +43,14 @@
             f.father_id = #{rootCatId}
     </select>
 
-    <resultMap id="myNewItemsVO" type="com.heaven.vo.NewItemsVO">
+    <resultMap id="myNewItemsVO" type="com.heaven.pojo.vo.NewItemsVO">
         <id column="root_cat_id" property="rootCatId"/>
         <result column="root_cat_name" property="rootCatName"/>
         <result column="slogan" property="slogan"/>
         <result column="cat_image" property="catImage"/>
         <result column="bg_color" property="bgColor"/>
 
-        <collection property="simpleItemList" ofType="com.heaven.vo.SimpleItemVO">
+        <collection property="simpleItemList" ofType="com.heaven.pojo.vo.SimpleItemVO">
             <id column="item_id" property="itemId"/>
             <result column="item_name" property="itemName"/>
             <result column="item_url" property="itemUrl"/>

@@ -1,14 +1,14 @@
 package com.heaven.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.heaven.bo.UserBO;
+import com.heaven.pojo.bo.UserBO;
 import com.heaven.enums.Sex;
 import com.heaven.mapper.UsersMapper;
 import com.heaven.pojo.Users;
 import com.heaven.service.UserService;
 import com.heaven.utils.DateUtil;
 import com.heaven.utils.MD5Utils;
-import com.heaven.vo.UserVO;
+import com.heaven.pojo.vo.UserVO;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
